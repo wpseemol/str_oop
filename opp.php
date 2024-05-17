@@ -56,4 +56,23 @@ class Member
     {
         return $this->name;
     }
+
+    public function borrowBook(Book $book)
+    {
+        if ($book->borrowBook()) {
+
+            echo $this->name . " successfully borrowed '" . $book->getTitle() . "'.\n";
+        } else {
+            echo $this->name . " failed to borrow '" . $book->getTitle() . "' because there are no available copies.\n";
+        }
+    }
+
+
+
+    public function returnBook(Book $book)
+    {
+
+        $book->returnBook();
+        echo $this->name . " returned '" . $book->getTitle() . "'.\n";
+    }
 }

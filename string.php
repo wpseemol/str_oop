@@ -19,7 +19,7 @@ function string_to_vowels_count(array $str_arr)
 
 
         printf(
-            "Original String: %s, Vowel Count: %d, Reversed String: %s /n",
+            "Original String: %s, Vowel Count: %d, Reversed String: %s \n",
             $org_string,
             $str_vowel,
             $revers_str

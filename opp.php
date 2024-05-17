@@ -76,3 +76,31 @@ class Member
         echo $this->name . " returned '" . $book->getTitle() . "'.\n";
     }
 }
+
+
+
+
+
+$book1 = new Book("The Great Gatsby", 5);
+$book2 = new Book("To Kill a Mockingbird", 3);
+
+echo "Available Copies of \n";
+
+echo "Available Copies of '" . $book1->getTitle() . "': " . $book1->getAvailableCopy() . "\n";
+echo "Available Copies of '" . $book2->getTitle() . "': " . $book2->getAvailableCopy() . "\n";
+
+$memberJohn = new Member("John Doe");
+$memberJane = new Member("Jane Smith");
+
+$memberJohn->borrowBook($book1);
+$memberJane->borrowBook($book2);
+
+
+echo "Available Copies of '" . $book1->getTitle() . "': " . $book1->getAvailableCopy() . "\n";
+echo "Available Copies of '" . $book2->getTitle() . "': " . $book2->getAvailableCopy() . "\n";
+
+$memberJane->returnBook($book2);
+
+echo "after return \n";
+
+echo "Available Copies of '" . $book2->getTitle() . "': " . $book2->getAvailableCopy() . "\n";

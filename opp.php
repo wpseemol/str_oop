@@ -41,3 +41,8 @@ class Book
         $this->available_copy++;
     }
 };
+
+
+class Member
+{
+}

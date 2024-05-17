@@ -1,6 +1,4 @@
 <?php
-
-
 function string_to_vowels_count(array $str_arr)
 {
     // vowels array
@@ -47,7 +45,6 @@ function word_revers(string $str): string
 {
     $str_length = strlen($str);
     $revers_str = "";
-
     for ($i = $str_length - 1; $i >= 0; $i--) {
         $revers_str .= $str[$i];
     }
